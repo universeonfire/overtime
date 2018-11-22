@@ -1,4 +1,9 @@
 <%= form_for @post do |f| %>
+	<% if @post.errors.any? %>
+      	<% @post.errors.full_messages.each do |message| %>
+			<%= alert_gen message %>
+		<% end %>
+	<% end %>
 
 <form class= "form-horizontal" role= "form">
 	 
