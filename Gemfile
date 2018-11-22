@@ -42,6 +42,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.8', '>= 3.8.1'
   gem 'capybara', '~> 3.11', '>= 3.11.1'
   gem 'database_cleaner', '~> 1.7'
+  gem 'factory_girl_rails', '~> 4.9'
 end
 
 group :development do
