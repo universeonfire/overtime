@@ -1,5 +1,5 @@
 AdminUser.create!(email: "adminwizard@test.com" , password: "asdasd" , password_confirmation: "asdasd", first_name: "Gandalf" , last_name: "The White" , full_name: "Gandalf The White")
-User.create!(email: "kingofmiddleearht@test.com" , password: "asdasd" , password_confirmation: "asdasd", first_name: "Aragorn" , last_name: "Son of Arathorn", full_name: "Aragorn Son of Arathorn")
+User.create!(email: "kingofgondor@test.com" , password: "asdasd" , password_confirmation: "asdasd", first_name: "Aragorn" , last_name: "Son of Arathorn", full_name: "Aragorn Son of Arathorn")
 User.create!(email: "princeelf@test.com" , password: "asdasd" , password_confirmation: "asdasd", first_name: "Legolas" , last_name: "Son of Thranduil", full_name: "Legolas Son of Thranduil")
 User.create!(email: "dwarf@test.com" , password: "asdasd" , password_confirmation: "asdasd", first_name: "Gimli" , last_name: "Son of Gloin", full_name: "Gimli Son of Gloin")
 User.create!(email: "captain@test.com" , password: "asdasd" , password_confirmation: "asdasd", first_name: "Boromir" , last_name: "Son of Denethor", full_name: "Boromir Son of Denethor")
