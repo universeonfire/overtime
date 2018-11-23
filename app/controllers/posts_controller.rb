@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
-	before_action :set_post, only: [:show, :update , :edit, :destroy]
+	before_action :set_post, only: [:show, :update , :edit, :destroy ]
 	def index
-		@posts = Post.all
+		@posts = Post.all.by_id
 	end
 	def new
 		@post = Post.new
@@ -39,7 +39,7 @@ class PostsController < ApplicationController
 
 	private
 	def post_params
-		params.require(:post).permit(:date, :rationale )
+		params.require(:post).permit(:date, :rationale ,:status)
 	end
 	def set_post
 		@post = Post.find(params[:id])

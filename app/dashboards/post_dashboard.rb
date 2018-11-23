@@ -9,11 +9,13 @@ class PostDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     user: Field::BelongsTo,
+    full_name: Field::Text,
     id: Field::Number,
     date: Field::DateTime,
     rationale: Field::Text,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
+    status: Field::Text,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -23,20 +25,24 @@ class PostDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :user,
+    :full_name,
     :id,
     :date,
     :rationale,
+    :status,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
     :user,
+    :full_name,
     :id,
     :date,
     :rationale,
     :created_at,
     :updated_at,
+    :status,
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -44,8 +50,10 @@ class PostDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
     :user,
+    :full_name,
     :date,
     :rationale,
+    :status,
   ].freeze
 
   # Overwrite this method to customize how posts are displayed
