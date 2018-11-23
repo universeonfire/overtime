@@ -19,9 +19,13 @@ class PostsController < ApplicationController
 		@post = set_post
 	end
 	def edit
+		#pundit gem post_policy
+		authorize @post
 		
 	end
 	def update
+		authorize @post
+
 		respond_to do |format|
 			if @post.update(post_params)
 				format.html{redirect_to posts_path, notice: 'Post was successfully updated.' }
