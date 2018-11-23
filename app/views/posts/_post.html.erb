@@ -17,6 +17,9 @@
 		<%= post.rationale %>
 	</td>
 	<td>
+		<%= status_label(post.status) %>
+	</td>
+	<td>
 		<%= link_to "Edit", edit_post_path(post) %>
 		<%= link_to "Delete", post_path(post) , method: :delete , data: { confirm: 'r u sure?' }  %>
 		

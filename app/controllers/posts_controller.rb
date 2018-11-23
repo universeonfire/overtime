@@ -2,7 +2,11 @@ class PostsController < ApplicationController
 	before_action :set_post, only: [:show, :update , :edit, :destroy ]
 	def index
 		#post.rb model dosyasında oluşturduğum scope
-		@posts = Post.posts_by(current_user)
+		if current_user.type == "AdminUser"  
+			@posts = Post.all
+		else
+			@posts = Post.posts_by(current_user)
+		end
 	end
 	def new
 		@post = Post.new
