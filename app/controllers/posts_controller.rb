@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
 	before_action :set_post, only: [:show, :update , :edit, :destroy ]
 	def index
-		@posts = Post.all
+		#post.rb model dosyasında oluşturduğum scope
+		@posts = Post.posts_by(current_user)
 	end
 	def new
 		@post = Post.new
@@ -20,8 +21,7 @@ class PostsController < ApplicationController
 	end
 	def edit
 		#pundit gem post_policy
-		authorize @post
-		
+		authorize @post	
 	end
 	def update
 		authorize @post
