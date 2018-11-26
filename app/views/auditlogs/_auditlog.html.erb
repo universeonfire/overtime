@@ -1,0 +1,20 @@
+<% if auditlog.errors.any? %>
+  	<% auditlog.errors.full_messages.each do |message| %>
+		<%= alert_gen message %>
+	<% end %>
+<% end %>
+<tr>
+	<td>
+		<%= auditlog.user.full_name %>
+	</td>
+	<td>
+		<%= audit_status_label(auditlog.status) %>
+	</td>
+	<td>
+		<%= auditlog.start_date %>
+	</td>
+	<td>
+		<%= auditlog.date_verified %>
+	</td>
+	 
+</tr>

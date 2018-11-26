@@ -3,9 +3,9 @@ class PostsController < ApplicationController
 	def index
 		#post.rb model dosyasında oluşturduğum scope
 		if current_user.type == "AdminUser"  
-			@posts = Post.all
+			@posts = Post.all.page(params[:page]).per(20)
 		else
-			@posts = Post.posts_by(current_user)
+			@posts = Post.posts_by(current_user).page(params[:page]).per(20)
 		end
 	end
 	def new

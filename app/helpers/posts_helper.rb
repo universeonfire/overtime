@@ -15,6 +15,11 @@ module PostsHelper
 				content_tag(:span, status.titleize, class: 'label label-success')
 			when 'rejected'
 				content_tag(:span, status.titleize, class: 'label label-danger')
+			when 'pending'
+				content_tag(:span, status.titleize, class: 'label label-primary')
+			when 'confirmed'
+				content_tag(:span, status.titleize, class: 'label label-success')
+			 
 		end
 	end
 	def rationale_span_generator status , rationale
