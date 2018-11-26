@@ -1,1 +1,45 @@
-<%= @post.inspect %> 
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<h3 class="text-primary">
+				<%= @post.user.full_name %> 
+			</h3>
+			<table class="table table-bordered table-sm">
+				<thead>
+					<tr>
+						<th>
+							Overtime Requested 
+						</th>
+						<th>
+							Overtime Date
+						</th>
+						<th>
+							Request Status
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="table-active">
+						<td>
+							<%= @post.overtime_request%>
+						</td>
+						<td>
+							<%= @post.date%>
+						</td>
+						<td>
+							<%= status_label(@post.status) %>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div> 
+				<h4>Rationale</h4> 
+				<strong><%= rationale_label(@post.status , @post.rationale) %> </strong></a>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+ 
+ 

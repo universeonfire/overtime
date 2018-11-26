@@ -5,7 +5,10 @@
 <% end %>
 <tr>
 	<td>
-		<%= link_to post.id , post_show_path(post.id) %>
+		<%= post.id   %>
+	</td>
+	<td>
+		<%= post.overtime_request %>
 	</td>
 	<td>
 		<%= post.user.full_name %>
@@ -14,14 +17,17 @@
 		<%= post.date %>
 	</td>
 	<td>
-		<%= post.rationale %>
+		<%= link_to post.rationale  , post_show_path(post.id) %>
 	</td>
-	<td>
+	<td align="center">
 		<%= status_label(post.status) %>
 	</td>
-	<td>
-		<%= link_to "Edit", edit_post_path(post) if policy(post).update? %>
-		<%= link_to "Delete", post_path(post) , method: :delete , data: { confirm: 'r u sure?' }  %>
+	<td align="center">
+		<%= link_to "", edit_post_path(post) , class: 'glyphicon glyphicon-floppy-open index-iconedit ' if policy(post).update? %>
+	</td>
+	<td align="center">
+		<%= link_to "", post_path(post) , class: 'glyphicon glyphicon-floppy-remove index-icondel', method: :delete , data: { confirm: 'r u sure?' }  %>
 		
 	</td>
 </tr>
+ 

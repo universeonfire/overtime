@@ -8,8 +8,12 @@
 <form class= "form-horizontal" role= "form">
 	 
 	<div class="form-group">
-	<%= f.date_field :date %>
-	<%= f.text_area :rationale  ,class: "form-control", rows: 15 %>
+		<%= f.label "Overtime Request" ,class: "form-control"%>
+		<%= f.number_field :overtime_request ,class: "form-control" %>
+		<%= f.label "Date" ,class: "form-control"%>
+		<%= f.date_field :date ,class: "form-control" %>
+		<%= f.label "Rationale" ,class: "form-control"%>
+		<%= f.text_area :rationale  ,class: "form-control", rows: 15 %>
 
 	</div>
 	<%= render partial: "status", locals: {f: f} if current_user.type == 'AdminUser' %>

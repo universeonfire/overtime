@@ -8,18 +8,18 @@ User.create!(email: "kingofrohan@test.com" , password: "asdasd" , password_confi
 
 
 20.times do |p|
-	Post.create!(date: Date.today, rationale: "#{p + 1} rationale content" ,user_id: 2)
+	Post.create!(date: Date.today, rationale: "#{p + 1} rationale content" ,user_id: 2, overtime_request: 2.5)
 end
 20.times do |p|
-	Post.create!(date: Date.today, rationale: "#{p + 21} rationale content" ,user_id: 3)
+	Post.create!(date: Date.today, rationale: "#{p + 21} rationale content" ,user_id: 3, overtime_request: 1.5)
 end
 20.times do |p|
-	Post.create!(date: Date.today, rationale: "#{p + 41} rationale content" ,user_id: 4)
+	Post.create!(date: Date.today, rationale: "#{p + 41} rationale content" ,user_id: 4, overtime_request: 3.5)
 end
 20.times do |p|
-	Post.create!(date: Date.today, rationale: "#{p + 61} rationale content" ,user_id: 5)
+	Post.create!(date: Date.today, rationale: "#{p + 61} rationale content" ,user_id: 5, overtime_request: 2.5)
 end
 20.times do |p|
-	Post.create!(date: Date.today, rationale: "#{p + 81} rationale content" ,user_id: 6)
+	Post.create!(date: Date.today, rationale: "#{p + 81} rationale content" ,user_id: 6, overtime_request: 5.5)
 end
 
