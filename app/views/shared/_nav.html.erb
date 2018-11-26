@@ -8,6 +8,11 @@
 	<li class="<%= active?(posts_path) %>">
 		<%= link_to "Posts", posts_path , class: "nav-link active" %>
 	</li>
+	<% if policy(Auditlog).index? %>
+		<li class="<%= active?(auditlogs_path) %>">
+			<%= link_to "Audit Logs", auditlogs_path , class: "nav-link active" %>
+		</li>
+	<% end %> 
 	<li class="<%= active?(new_post_path) %>">
 		<%= link_to "New Post", new_post_path , class: "nav-link active" %>
 	</li>
