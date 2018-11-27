@@ -67,3 +67,4 @@ gem 'pundit', '~> 2.0'
 gem 'twilio-ruby', '~> 5.16'
 gem 'dotenv-rails', :groups => [:development, :test]
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
+gem 'popper_js', '~> 1.9', '>= 1.9.9'
