@@ -1,0 +1,2 @@
+$('#auditlogs').html('<%= escape_javascript render(@auditlogs) %>');
+$('#paginator').html('<%= escape_javascript(paginate(@auditlogs, remote: true).to_s) %>');

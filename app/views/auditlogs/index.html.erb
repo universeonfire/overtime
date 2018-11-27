@@ -18,12 +18,13 @@
 						</th>
 					</tr>
 				</thead>
-				<tbody>
+				<tbody id = "auditlogs">
 					<%= render @auditlogs %>
 				</tbody>
 			</table>
 		</div>
 	</div>
 </div>
-<%= paginate @auditlogs %>
-
+<div id = "paginator">
+	<%= paginate @auditlogs, remote: true  %>
+</div>
