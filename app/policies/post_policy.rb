@@ -7,6 +7,9 @@ class PostPolicy < ApplicationPolicy
 	def approve?
 		admin?
 	end
+	def reject?
+		admin?
+	end
 
 	private
 

@@ -1,1 +1,4 @@
-$('#cb').html('<%= escape_javascript render(@pending_approvals) %>');
+
+$('#approvals').html('<%= escape_javascript render(@pending_approvals) %>');
+ 
+$('#paginator').html('<%= escape_javascript(paginate(@pending_approvals, remote: true).to_s) %>');

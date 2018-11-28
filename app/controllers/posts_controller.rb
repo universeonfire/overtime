@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-	before_action :set_post, only: [:show, :update , :edit, :destroy , :approve]
+	before_action :set_post, only: [:show, :update , :edit, :destroy , :approve, :reject]
 	def index
 		#post.rb model dosyasında oluşturduğum scope
 		if current_user.type == "AdminUser"  
@@ -12,6 +12,11 @@ class PostsController < ApplicationController
 		authorize @post
 		@post.approved!
 		redirect_to root_path , notice: "The post has been approved"
+	end
+	def reject
+		authorize @post
+		@post.rejected!
+		redirect_to root_path , notice: "The post has been rejected"
 	end
 	def new
 		@post = Post.new

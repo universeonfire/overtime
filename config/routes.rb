@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :posts do
     member do
       get :approve
+      get :reject
     end
   end
   devise_for :users , skip: [:registration]

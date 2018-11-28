@@ -3,3 +3,56 @@
 @import 'posts.css';
 @import "gritter";
 @import "bourbon";
+
+.pending-homepage {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background-color: #E3E3E3;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	padding: 20px;
+}
+
+.homepage-block {
+	background-color: white;
+	color: #5793cc;
+	margin: 15px 42px 15px 42px;
+	padding: 12px;
+	-webkit-border-radius: 1px;
+	-moz-border-radius: 2px;
+	border-radius: 1px;
+}
+
+.pending-details {
+	font-weight: 900;
+}
+/*
+.homepage-block:hover {
+	background-color: #172b63;
+}
+*/
+.glyphicon-thumbs-up {
+	color: Green;
+	font-size: 1.2em;
+}
+.glyphicon-thumbs-up:hover {
+	color: lightGreen;
+	font-size: 1.5em;
+}
+.glyphicon-thumbs-down {
+	color: darkRed;
+	font-size: 1.2em;
+}
+.glyphicon-thumbs-down:hover {
+	color: Red;
+	font-size: 1.5em;
+}
+.glyphicon-hand-left {
+	color: darkBlue;
+	font-size: 1.2em;
+}
+.glyphicon-hand-left:hover {
+	color: blue;
+	font-size: 1.5em;
+}
