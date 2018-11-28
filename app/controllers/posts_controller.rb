@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-	before_action :set_post, only: [:show, :update , :edit, :destroy ]
+	before_action :set_post, only: [:show, :update , :edit, :destroy , :approve]
 	def index
 		#post.rb model dosyasında oluşturduğum scope
 		if current_user.type == "AdminUser"  
@@ -7,6 +7,11 @@ class PostsController < ApplicationController
 		else
 			@posts = Post.posts_by(current_user).page(params[:page]).per(20)
 		end
+	end
+	def approve
+		authorize @post
+		@post.approved!
+		redirect_to root_path , notice: "The post has been approved"
 	end
 	def new
 		@post = Post.new
