@@ -5,6 +5,14 @@ module ApplicationHelper
 	def active?(path)
 		"active" if current_page?(path)
 	end
+    def employee?
+        current_user.type == "Employee"
+
+    end
+    def admin?
+        admin_types.include?(current_user.type)
+
+    end
 	def alerts
         alert = (flash[:alert] || flash[:error] || flash[:notice])
         

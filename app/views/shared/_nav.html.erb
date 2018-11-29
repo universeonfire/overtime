@@ -8,20 +8,15 @@
 	<li class="<%= active?(posts_path) %>">
 		<%= link_to "Posts", posts_path , class: "nav-link active" %>
 	</li>
-	<% if policy(Auditlog).index? %>
-		<li class="<%= active?(auditlogs_path) %>">
-			<%= link_to "Audit Logs", auditlogs_path , class: "nav-link active" %>
-		</li>
-	<% end %> 
-	<li class="<%= active?(new_post_path) %>">
-		<%= link_to "New Post", new_post_path , class: "nav-link active" %>
-	</li>
+	<%= render 'shared/employee_nav_items' if employee? %>
+	 
+	<%= render 'shared/audit_log_tabs' if admin? %>
+	 
+	
 	<li class="nav-item dropdown ml-md-auto">
-		 <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">Account</a>
+		 <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">Options</a>
 		<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-			<% if current_user.try(:type) == "AdminUser" %>
-				<%= link_to "Administrate Panel", admin_root_path , class: "nav-link active" %>
-			<% end %> 
+			<%= render 'shared/admin_dropdown' if admin? %>
 			<div class="dropdown-divider">
 			</div> <%= link_to "Log Out", destroy_user_session_path, method: :delete  %>
 		</div>

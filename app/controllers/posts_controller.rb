@@ -2,7 +2,7 @@ class PostsController < ApplicationController
 	before_action :set_post, only: [:show, :update , :edit, :destroy , :approve, :reject]
 	def index
 		#post.rb model dosyasında oluşturduğum scope
-		if current_user.type == "AdminUser"  
+		if admin_types.include?(current_user.type)
 			@posts = Post.all.page(params[:page]).per(20)
 		else
 			@posts = Post.posts_by(current_user).page(params[:page]).per(20)
