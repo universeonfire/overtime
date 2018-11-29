@@ -11,12 +11,12 @@ class PostsController < ApplicationController
 	def approve
 		authorize @post
 		@post.approved!
-		redirect_to root_path , notice: "The post has been approved"
+		redirect_to request.referrer || root_path , notice: "The post has been approved"
 	end
 	def reject
 		authorize @post
 		@post.rejected!
-		redirect_to root_path , notice: "The post has been rejected"
+		redirect_to request.referrer || root_path , notice: "The post has been rejected"
 	end
 	def new
 		@post = Post.new
