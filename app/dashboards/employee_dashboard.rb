@@ -12,6 +12,8 @@ class EmployeeDashboard < Administrate::BaseDashboard
     id: Field::Number,
     email: Field::String,
     password: Field::String,
+    ssn: Field::Number,
+    company: Field::String,
     reset_password_token: Field::String,
     reset_password_sent_at: Field::DateTime,
     remember_created_at: Field::DateTime,
@@ -37,6 +39,8 @@ class EmployeeDashboard < Administrate::BaseDashboard
     :posts,
     :id,
     :email,
+    :ssn,
+    :company,
     
   ].freeze
 
@@ -47,6 +51,8 @@ class EmployeeDashboard < Administrate::BaseDashboard
     :id,
     :email,
     :password,
+    :ssn,
+    :company,
     :reset_password_token,
     :reset_password_sent_at,
     :remember_created_at,
@@ -70,6 +76,8 @@ class EmployeeDashboard < Administrate::BaseDashboard
     :posts,
     :email,
     :password,
+    :ssn,
+    :company,
     :reset_password_token,
     :reset_password_sent_at,
     :remember_created_at,

@@ -1,9 +1,9 @@
-AdminUser.create!(email: "adminwizard@test.com" , password: "asdasd" , password_confirmation: "asdasd", first_name: "Gandalf" , last_name: "The White" , full_name: "Gandalf The White")
-Employee.create!(email: "kingofgondor@test.com" , password: "asdasd" , password_confirmation: "asdasd", first_name: "Aragorn" , last_name: "Son of Arathorn", full_name: "Aragorn Son of Arathorn")
-Employee.create!(email: "princeelf@test.com" , password: "asdasd" , password_confirmation: "asdasd", first_name: "Legolas" , last_name: "Son of Thranduil", full_name: "Legolas Son of Thranduil")
-Employee.create!(email: "dwarf@test.com" , password: "asdasd" , password_confirmation: "asdasd", first_name: "Gimli" , last_name: "Son of Gloin", full_name: "Gimli Son of Gloin")
-Employee.create!(email: "captain@test.com" , password: "asdasd" , password_confirmation: "asdasd", first_name: "Boromir" , last_name: "Son of Denethor", full_name: "Boromir Son of Denethor")
-Employee.create!(email: "kingofrohan@test.com" , password: "asdasd" , password_confirmation: "asdasd", first_name: "Eomer" , last_name: "Son of Eomund", full_name: "Eomer Son of Eomund")
+AdminUser.create!(email: "adminwizard@test.com" , password: "asdasd" , password_confirmation: "asdasd", first_name: "Gandalf" , last_name: "The White" , full_name: "Gandalf The White", ssn: 1, company: "Fellowship")
+Employee.create!(email: "kingofgondor@test.com" , password: "asdasd" , password_confirmation: "asdasd", first_name: "Aragorn" , last_name: "Son of Arathorn", full_name: "Aragorn Son of Arathorn", ssn: 2, company: "Fellowship")
+Employee.create!(email: "princeelf@test.com" , password: "asdasd" , password_confirmation: "asdasd", first_name: "Legolas" , last_name: "Son of Thranduil", full_name: "Legolas Son of Thranduil", ssn: 3, company: "Fellowship")
+Employee.create!(email: "dwarf@test.com" , password: "asdasd" , password_confirmation: "asdasd", first_name: "Gimli" , last_name: "Son of Gloin", full_name: "Gimli Son of Gloin", ssn: 4, company: "Fellowship")
+Employee.create!(email: "captain@test.com" , password: "asdasd" , password_confirmation: "asdasd", first_name: "Boromir" , last_name: "Son of Denethor", full_name: "Boromir Son of Denethor", ssn: 5, company: "Fellowship")
+Employee.create!(email: "kingofrohan@test.com" , password: "asdasd" , password_confirmation: "asdasd", first_name: "Eomer" , last_name: "Son of Eomund", full_name: "Eomer Son of Eomund", ssn: 6, company: "Rohan")
 
 
 
