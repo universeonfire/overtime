@@ -12,7 +12,7 @@ class PostDashboard < Administrate::BaseDashboard
     full_name: Field::Text,
     id: Field::Number,
     date: Field::DateTime,
-    rationale: Field::Text,
+    work_performed: Field::Text,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     status: Field::Text,
@@ -28,7 +28,7 @@ class PostDashboard < Administrate::BaseDashboard
     :full_name,
     :id,
     :date,
-    :rationale,
+    :work_performed,
     :status,
   ].freeze
 
@@ -39,7 +39,7 @@ class PostDashboard < Administrate::BaseDashboard
     :full_name,
     :id,
     :date,
-    :rationale,
+    :work_performed,
     :created_at,
     :updated_at,
     :status,
@@ -52,7 +52,7 @@ class PostDashboard < Administrate::BaseDashboard
     :user,
     :full_name,
     :date,
-    :rationale,
+    :work_performed,
     :status,
   ].freeze
 

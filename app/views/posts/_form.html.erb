@@ -12,8 +12,8 @@
 		<%= f.number_field :daily_hours ,class: "form-control" %>
 		<%= f.label "Date" ,class: "form-control"%>
 		<%= f.date_field :date ,class: "form-control" %>
-		<%= f.label "Rationale" ,class: "form-control"%>
-		<%= f.text_area :rationale  ,class: "form-control", rows: 15 %>
+		<%= f.label "Work Performed" ,class: "form-control"%>
+		<%= f.text_area :work_performed  ,class: "form-control", rows: 15 %>
 
 	</div>
 	<%= render partial: "status", locals: {f: f} if current_user.type == 'AdminUser' %>

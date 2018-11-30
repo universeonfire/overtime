@@ -8,23 +8,23 @@ Employee.create!(email: "kingofrohan@test.com" , password: "asdasd" , password_c
 
 
  
-Post.create!(date: Date.today, rationale: "#{1} rationale content" ,user_id: 2, daily_hours: 2.5)
+Post.create!(date: Date.today, work_performed: "#{1} work_performed content" ,user_id: 2, daily_hours: 2.5)
 Auditlog.create!(user_id: 2, status: 0, start_date: (Date.today - 6.days))
 
 
-Post.create!(date: Date.today, rationale: "#{21} rationale content" ,user_id: 3, daily_hours: 1.5)
+Post.create!(date: Date.today, work_performed: "#{21} work_performed content" ,user_id: 3, daily_hours: 1.5)
 Auditlog.create!(user_id: 3, status: 0, start_date: (Date.today - 6.days))
 
 
-Post.create!(date: Date.today, rationale: "#{41} rationale content" ,user_id: 4, daily_hours: 3.5)
+Post.create!(date: Date.today, work_performed: "#{41} work_performed content" ,user_id: 4, daily_hours: 3.5)
 Auditlog.create!(user_id: 4, status: 0, start_date: (Date.today - 6.days))
 
 
-Post.create!(date: Date.today, rationale: "#{61} rationale content" ,user_id: 5, daily_hours: 2.5)
+Post.create!(date: Date.today, work_performed: "#{61} work_performed content" ,user_id: 5, daily_hours: 2.5)
 Auditlog.create!(user_id: 5, status: 0, start_date: (Date.today - 6.days))
 
 
-Post.create!(date: Date.today, rationale: "#{81} rationale content" ,user_id: 6, daily_hours: 5.5)
+Post.create!(date: Date.today, work_performed: "#{81} work_performed content" ,user_id: 6, daily_hours: 5.5)
 Auditlog.create!(user_id: 6, status: 0, start_date: (Date.today - 6.days))
 
 

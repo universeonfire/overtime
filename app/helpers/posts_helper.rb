@@ -2,8 +2,8 @@ module PostsHelper
 	def status_label status
 		status_span_generator status
 	end
-	def rationale_label status , rationale
-		rationale_span_generator(status , rationale)
+	def work_performed_label status , work_performed
+		work_performed_span_generator(status , work_performed)
 	end
 	private
 
@@ -22,14 +22,14 @@ module PostsHelper
 			 
 		end
 	end
-	def rationale_span_generator status , rationale
+	def work_performed_span_generator status , work_performed
 		case status
 			when 'submitted'
-				content_tag(:div, rationale.titleize, class: 'alert alert-dismissable alert-info')
+				content_tag(:div, work_performed.titleize, class: 'alert alert-dismissable alert-info')
 			when 'approved'
-				content_tag(:div, rationale.titleize, class: 'alert alert-dismissable alert-success')
+				content_tag(:div, work_performed.titleize, class: 'alert alert-dismissable alert-success')
 			when 'rejected'
-				content_tag(:div, rationale.titleize, class: 'alert alert-dismissable alert-danger')
+				content_tag(:div, work_performed.titleize, class: 'alert alert-dismissable alert-danger')
 		end
 	end
 end
